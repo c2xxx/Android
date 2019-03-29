@@ -6,6 +6,8 @@ import android.content.res.AssetManager;
 import android.os.Environment;
 import android.text.TextUtils;
 
+import com.chen.demo2019.utils.tools.MD5Util;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -18,7 +20,6 @@ import java.util.Date;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import cn.broadin.libutils.tools.MD5Util;
 
 import static android.R.attr.id;
 import static android.os.Environment.MEDIA_MOUNTED;
