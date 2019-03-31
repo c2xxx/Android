@@ -2,9 +2,6 @@ package com.chen.demo2019.utils;
 
 import android.content.pm.ApplicationInfo;
 
-import java.io.File;
-import java.io.IOException;
-
 /**
  * 控制（Release版本）程序是否打印LOG
  * Created by ChenHui on 2017/5/25.
@@ -12,11 +9,9 @@ import java.io.IOException;
 
 public class MyDebugConfig {
     private static boolean isOpenDebug = false;
-    private static String _isDebug = FileHelper.getInstance().getCacheDir() + File.separator + "_isDebug";
 
     static {
-        File f = new File(_isDebug);
-        isOpenDebug = f.exists();
+        isOpenDebug = true;
     }
 
     public static boolean isRelease() {
@@ -40,24 +35,11 @@ public class MyDebugConfig {
         isOpenDebug = true;
         Logger.initDebug();
         Logger.d("openDebug");
-//        MyApplication.initDebug();
-
-        File f = new File(_isDebug);
-        if (!f.exists()) {
-            try {
-                f.createNewFile();
-            } catch (IOException e) {
-                Logger.e(e);
-            }
-        }
     }
 
     public static void closeDebug() {
         Logger.d("closeDebug");
         isOpenDebug = false;
         Logger.initDebug();
-//        MyApplication.initDebug();
-        File f = new File(_isDebug);
-        f.delete();
     }
 }
