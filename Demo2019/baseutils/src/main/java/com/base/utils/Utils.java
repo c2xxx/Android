@@ -1,4 +1,4 @@
-package com.chen.demo2019.utils;
+package com.base.utils;
 
 import android.app.Activity;
 import android.content.Context;

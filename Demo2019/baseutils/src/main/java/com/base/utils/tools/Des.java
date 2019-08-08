@@ -1,4 +1,4 @@
-package com.chen.demo2019.utils.tools;
+package com.base.utils.tools;
 
 /**
  * Created by ChenHui on 2017/5/10.

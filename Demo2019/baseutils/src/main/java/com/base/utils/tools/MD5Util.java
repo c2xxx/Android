@@ -1,4 +1,4 @@
-package com.chen.demo2019.utils.tools;
+package com.base.utils.tools;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

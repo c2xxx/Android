@@ -1,6 +1,8 @@
-package com.chen.demo2019.utils;
+package com.base.utils;
 
 import android.content.pm.ApplicationInfo;
+
+import com.base.AppContext;
 
 /**
  * 控制（Release版本）程序是否打印LOG
@@ -33,13 +35,13 @@ public class MyDebugConfig {
 
     public static void openDebug() {
         isOpenDebug = true;
-        Logger.initDebug();
+        Logger.log_level = Logger.LOG_LEVEL.ALL;
         Logger.d("openDebug");
     }
 
     public static void closeDebug() {
         Logger.d("closeDebug");
         isOpenDebug = false;
-        Logger.initDebug();
+        Logger.log_level = Logger.LOG_LEVEL.NONE;
     }
 }

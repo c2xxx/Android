@@ -1,4 +1,4 @@
-package com.chen.demo2019.utils;
+package com.base.utils;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -6,7 +6,8 @@ import android.content.res.AssetManager;
 import android.os.Environment;
 import android.text.TextUtils;
 
-import com.chen.demo2019.utils.tools.MD5Util;
+import com.base.AppContext;
+import com.base.utils.tools.MD5Util;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
