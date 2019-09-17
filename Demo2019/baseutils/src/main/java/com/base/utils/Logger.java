@@ -4,6 +4,9 @@ import android.text.TextUtils;
 import android.util.Log;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -13,6 +16,23 @@ import java.util.Set;
  * Created by hui on 2015/11/20.
  */
 public class Logger {
+
+//    DEMO:
+//    static {
+//        Logger.setJsonParser(new Logger.IJsonParser() {
+//            @Override
+//            public String toJSONString(Object object) {
+//                return JSON.toJSONString(object);
+//            }
+//
+//            @Override
+//            public String toJSONStringFormat(Object object) {
+//                return JSON.toJSONString(object, SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue,
+//                        SerializerFeature.WriteDateUseDateFormat);
+//            }
+//        });
+//    }
+
 
     private static final String TAG = "LoggerAPP";
     private static final String TAG_NET = "LoggerNET";

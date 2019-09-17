@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.base.AppContext;
 import com.base.Describe;
+import com.chen.demo2019.test.LocalMp3Player;
 
 public class MyApplication extends Application {
     @Override
@@ -11,6 +12,7 @@ public class MyApplication extends Application {
         super.onCreate();
         test();
         AppContext.setContext(this);
+
     }
 
     public void test() {
