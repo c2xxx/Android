@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
-public class ApkCheck {
+public class ApkSecurityCheck {
 
 
     public String apkSha1(Context context) {

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 
+import com.base.security.ApkSecurityCheck;
 import com.base.utils.GetIPv6Address;
 import com.base.utils.Logger;
 import com.base.utils.NetWorkUtil;
@@ -12,12 +13,55 @@ import com.chen.demo2019.R;
 import com.soundai.azero_sdk.constant.Cmd;
 import com.zhy.http.okhttp.callback.StringCallback;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import okhttp3.Call;
 
 public class Test {
     public void test(Context context) {
 //        testIpV6(context);
-        testAzeroSDK(context);
+//        testAzeroSDK(context);
+//        testSecurity(context);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String[] strs1 = parseIp("www.baidu.com");
+                Logger.json("str1", strs1);
+                String[] strs2 = parseIp("www.happy1day.com");
+                Logger.json("str2", strs2);
+            }
+        }).start();
+    }
+
+    /**
+     * 解析域名获取IP数组
+     *
+     * @param host
+     * @return
+     */
+    public String[] parseIp(String host) {
+        String[] ipAddressArr = null;
+        try {
+            InetAddress[] inetAddressArr = InetAddress.getAllByName(host);
+            if (inetAddressArr != null && inetAddressArr.length > 0) {
+                ipAddressArr = new String[inetAddressArr.length];
+                for (int i = 0; i < inetAddressArr.length; i++) {
+                    ipAddressArr[i] = inetAddressArr[i].getHostAddress();
+                }
+            }
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return ipAddressArr;
+    }
+
+    private void testSecurity(Context context) {
+        ApkSecurityCheck apkCheck = new ApkSecurityCheck();
+        String sha1 = apkCheck.apkSha1(context);
+        Logger.d("sha1=" + sha1);
+        Logger.d("isSystemRoot=" + apkCheck.isSystemRoot());
     }
 
     private AzeroSDK azeroSDK;
