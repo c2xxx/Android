@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入运动组名" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入运动项名" />
+
+        <EditText
+            android:id="@+id/et_item_during"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="运动时间"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_item_rest_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="休息时间"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_add_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="添加项" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="完成" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</LinearLayout>

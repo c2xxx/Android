@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.chen.keepsort.MainActivity">
+    <item
+        android:id="@+id/action_change_sport_group"
+        android:orderInCategory="100"
+        android:title="更换运动项目"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_add_sport_group"
+        android:orderInCategory="100"
+        android:title="添加运动项目"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_delete_sport_group"
+        android:orderInCategory="100"
+        android:title="删除运动项目"
+        app:showAsAction="never" />
+</menu>

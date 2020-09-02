@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态 -->
+    <item
+        android:width="@dimen/dimen_14dp"
+        android:height="@dimen/dimen_46dp"
+        android:drawable="@drawable/le_progress_point"
+        android:state_pressed="true" />
+
+    <!-- 焦点状态 -->
+    <item
+        android:width="@dimen/dimen_14dp"
+        android:height="@dimen/dimen_46dp"
+        android:drawable="@drawable/le_progress_point"
+        android:state_focused="true" />
+
+    <!-- 默认状态 -->
+    <item
+        android:width="@dimen/dimen_14dp"
+        android:height="@dimen/dimen_46dp"
+        android:drawable="@drawable/le_progress_point" />
+</layer-list>

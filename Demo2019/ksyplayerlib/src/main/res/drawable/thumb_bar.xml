@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--&lt;!&ndash; 按下状态 &ndash;&gt;-->
+    <!--<item android:state_pressed="true"-->
+    <!--android:drawable="@drawable/le_progress_point" />-->
+
+    <!--&lt;!&ndash; 焦点状态 &ndash;&gt;-->
+    <!--<item android:state_focused="true"-->
+    <!--android:drawable="@drawable/le_progress_point" />-->
+
+    <!--&lt;!&ndash; 默认状态 &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/le_progress_point" />-->
+
+
+    <!-- 背景  gradient是渐变,corners定义的是圆角 -->
+    <item android:id="@android:id/background">
+        <shape>
+
+            <!--<corners android:radius="@dimen/dimen_5dp" />-->
+            <!--<corners android:radius="@dimen/dimen_5dp" />-->
+            <solid android:color="#33ffffff" />
+        </shape>
+    </item>
+    <!-- 第二条进度条颜色 -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+
+                <!--<corners android:radius="@dimen/dimen_5dp" />-->
+                <solid android:color="#3301927f" />
+            </shape>
+        </clip>
+    </item>
+    <!-- 进度条 -->
+    <item
+        android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <!--<corners android:radius="@dimen/dimen_5dp" />-->
+
+                <solid android:color="#01927f" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dimen_1920dp"
+        android:layout_height="@dimen/dimen_160dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+        <!--android:background="@drawable/le_bg_prgressbar"-->
+
+        <LinearLayout
+            android:id="@+id/ll_video_progressbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/tv_video_progressbar_curr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_25dp"
+                android:text="1:33:33"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:text="/"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_40" />
+
+            <TextView
+                android:id="@+id/tv_video_progressbar_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_25dp"
+                android:text="1:33:33"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_40" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+
+            <SeekBar
+                android:id="@+id/sb_video_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10dp"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:progress="10"
+                android:progressDrawable="@drawable/d_progressbar_color"
+                android:thumb="@drawable/thumb_bar" />
+
+            <SeekBar
+                android:id="@+id/sb_video_progressbar_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:paddingLeft="@dimen/dimen_2dp"
+                android:progress="10"
+                android:progressDrawable="@drawable/d_seekbar_empty"
+                android:thumb="@drawable/thumb_bar_icon" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
