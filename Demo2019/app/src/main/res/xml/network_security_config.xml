@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<network-security-config>
+    <!--Android9.0，允许使用http-->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

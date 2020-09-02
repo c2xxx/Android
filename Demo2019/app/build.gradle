@@ -4,7 +4,12 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.chen.demo2019"
+<<<<<<< HEAD
         minSdkVersion 16
+=======
+//        applicationId "ptys.putaoyingshi.com"
+        minSdkVersion 23
+>>>>>>> 74ce7db71264ad81880db006ded422a1a29022c5
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -29,10 +34,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    //指定jdk版本
+
+
+    //工程添加aar包依赖时，gradle的配置①
+    repositories {
+        flatDir {
+//            /Users/hui/Desktop/code/work/ms3/VoiceAssistant/MS3SiRiHelper/siriv2/src/main/libs
+            dirs 'libs', '../siriv2/libs', '../siriv2/src/main/libs'
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    //工程添加aar包依赖时，gradle的配置①
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -43,12 +68,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'com.alibaba:fastjson:1.2.56'
 
-    implementation  'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    implementation project(":baseutils")
+
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
+<<<<<<< HEAD
     implementation 'com.zhy:okhttputils:2.6.2'
     compile project(path: ':ksyplayerlib')
+=======
+
+    implementation(name: 'azero_sdk_v1.2', ext: 'aar')
+>>>>>>> 74ce7db71264ad81880db006ded422a1a29022c5
 }
